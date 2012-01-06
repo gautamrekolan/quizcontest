@@ -1,0 +1,22 @@
+=form_for(@question) do |f|
+ %p
+  =f.label :question
+ %p
+  =f.text_area :question, :rows => 3
+ %p
+  =f.label :subjects
+  -for subject in @subjects
+   %div
+    =check_box_tag 'question[subject_ids][]', subject.id, @question.subjects.include?(subject)
+    =subject.name
+  %p Answer choices
+  =f.fields_for :choices do |builder|
+   %p{:class => 'fields'}
+    =builder.check_box :is_right_choice, :class=>"choice"
+    =builder.text_field :choice
+    =link_to 'Delete', '#', :class=>"remove"
+
+ %p{ :id => "add_link"}
+  =link_to 'Add Answer', "#", :id => "add_field", :style => "display:none;"
+ %p
+  =f.submit 'Submit', :disable_with => "Saving..."

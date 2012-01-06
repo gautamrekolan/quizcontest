@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="midpanel">
+    <h2>Choice your subject:</h2>
+    <ol class="choices">
+      <% 15.times do |i| %>
+        <li><label><input type="radio" /></label> English</li>
+        <li><label><input type="radio" /></label> Computer Science</li>
+        <li><label><input type="radio" /></label>General Knowledge</li>
+      <% end %>
+      <br/>
+    </ol>
+    <p><label>Number question:</label> 
+      <%=select_tag "number_of_question", options_for_select([15, 20, 30, 40])%>
+    </p>
+    <p><label>Duration: 30 mints</label></p>
+    <p><input type="submit" value="Start" /></p>
+  </div>
+</div>

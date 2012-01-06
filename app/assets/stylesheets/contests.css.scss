@@ -1,0 +1,82 @@
+// Place all the styles related to the contests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.content{
+ padding: 10px 10px;
+}
+
+
+
+ol
+{
+  width: 30em;  /* room for 3 columns */
+}
+ol li
+{
+  float: left;
+  width: 15em;  /* accommodate the widest item */
+}
+/* stop the floating after the list */
+br
+{
+  clear: left;
+}
+#left_panel {
+    float: left;width: 100px;position: relative;
+    border-right: solid 2px #696;
+}
+
+#right_panel {
+    /*    border: solid 1px #000;*/
+    float: left;width: 644px;position: relative;
+    padding: 0 0 0 5px;
+}
+
+.midpanel {
+  position: relative;right: -600px;top: 150px;
+ }
+
+.contest_header {
+    border: 1px solid #696;
+    padding: 20px 0;
+/*    text-align: center; */
+    width: 100%;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: #666 0px 2px 3px;
+    -moz-box-shadow: #666 0px 2px 3px;
+    box-shadow: #666 0px 2px 3px;
+    background: #EEFF99;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#EEFF99), to(#fffff0));
+    background: -webkit-linear-gradient(#EEFF99, #fffff0);
+    background: -moz-linear-gradient(#EEFF99, #fffff0);
+    background: -ms-linear-gradient(#EEFF99, #fffff0);
+    background: -o-linear-gradient(#EEFF99, #fffff0);
+    background: linear-gradient(#EEFF99, #fffff0);
+    -pie-background: linear-gradient(#EEFF99, #fffff0);
+    behavior: url(/PIE.htc);
+}
+.question{
+    padding: 10px 0 0 20px;
+}
+ul.questions {
+    list-style: none;
+}
+ul.answers {
+    list-style: none;
+}
+ul.answers li {width:100%;margin-bottom:5px;}
+
+.time-left{
+    position: absolute; right: 10px; top: 85px;
+}
+label, input { vertical-align: middle; margin-top: -1px;}
+
+.contest-status{
+/*    border: 1px solid #696;*/
+    padding: 10px 10px;
+    height: 35px;
+    width: 99%;
+}
